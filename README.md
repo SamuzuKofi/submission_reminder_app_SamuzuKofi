@@ -64,7 +64,7 @@ This repository contains a shell script (`create_environment.sh`) to set up the 
 
 The `create_environment.sh` script will create the following directory and file structure:
 
-submission_reminder_{yourName}/
+````submission_reminder_{yourName}/
 ├── app/
 │   └── reminder.sh
 ├── modules/
@@ -74,7 +74,7 @@ submission_reminder_{yourName}/
 ├── config/
 │   └── config.env
 └── startup.sh
-
+````
 ## Running the Application
 
 To run the application, execute the `startup.sh` script:
