@@ -33,11 +33,28 @@ source ./modules/functions.sh
 submissions_file="./assets/submissions.txt"
 
 # Print remaining time and run the reminder function
-echo "Assignment: $ASSIGNMENT"
-echo "Days remaining to submit: $DAYS_REMAINING days"
+#Shell Navigation
+echo "Assignment: $ASSIGNMENT_1"
+echo "Days remaining to submit: $DAYS_REMAINING_1 days"
 echo "--------------------------------------------"
 
-check_submissions "$submissions_file"
+check_submissions "$submissions_file" "$ASSIGNMENT_1"
+
+#Git
+echo ""
+echo "Assignment: $ASSIGNMENT_2"
+echo "Days remaining to submit: $DAYS_REMAINING_2 days"
+echo "--------------------------------------------"
+
+check_submissions "$submissions_file" "$ASSIGNMENT_2"
+
+#Shell Basics
+echo ""
+echo "Assignment: $ASSIGNMENT_3"
+echo "Days remaining to submit: $DAYS_REMAINING_3 days"
+echo "--------------------------------------------"
+
+check_submissions "$submissions_file" "$ASSIGNMENT_3"
 EOF
 
 #Adding content to functions.sh
@@ -48,6 +65,7 @@ cat << 'EOF' >  submission_reminder_$NAME/modules/functions.sh
 # Function to read submissions file and output students who have not submitted
 function check_submissions {
     local submissions_file="$1"
+    local assignment_name="$2"
     echo "Checking submissions in \"$submissions_file\""
 
     # Skip the header and iterate through the lines
@@ -58,8 +76,8 @@ function check_submissions {
         status=$(echo "$status" | xargs)
 
         # Check if assignment matches and status is 'not submitted'
-        if [[ "$assignment" == "$ASSIGNMENT" && "$status" == "not submitted" ]]; then
-            echo "Reminder: $student has not submitted the $ASSIGNMENT assignment!"
+        if [[ "$assignment" == "$assignment_name" && "$status" == "not submitted" ]]; then
+            echo "Reminder: $student has not submitted the $assignment assignment!"
         fi
     done < <(tail -n +2 "$submissions_file") # Skip the header
 }
@@ -84,9 +102,12 @@ EOF
 #Adding content to config.env
 cat << EOF > submission_reminder_$NAME/config/config.env
 # This is the config file
-ASSIGNMENT="Shell Navigation"
-DAYS_REMAINING=2
-
+ASSIGNMENT_1="Shell Navigation"
+ASSIGNMENT_2="Git"
+ASSIGNMENT_3="Shell Basics"
+DAYS_REMAINING_1=2
+DAYS_REMAINING_2=6
+DAYS_REMAINING_3=4
 EOF
 
 #Adding content to startup.sh
@@ -103,5 +124,3 @@ else
 fi
 
 EOF
-
-
