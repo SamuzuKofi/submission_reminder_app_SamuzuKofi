@@ -6,25 +6,25 @@ This repository contains a shell script (`create_environment.sh`) to set up the 
 
 1.  **Clone the Repository (Optional):** If you've downloaded this as a zip file, skip this step. If you're using Git, clone the repository to your local machine:
 
-    ```bash
+    ````bash
     git clone [https://github.com/](https://github.com/)[your_username]/submission_reminder_setup.git  # Replace with your repo URL
     cd submission_reminder_setup
-    ```
+    ````
 
 2.  **Run the Setup Script:** Make the `create_environment.sh` script executable and then run it:
 
-    ```bash
+    ````bash
     chmod +x create_environment.sh
     ./create_environment.sh
-    ```
+    ````
 
     The script will prompt you for your name. This name will be used to create the main directory for the application.
 
 3.  **Navigate to the Application Directory:** After the script finishes, a directory named `submission_reminder_{yourName}` will be created (where `{yourName}` is the name you entered). Navigate into this directory:
 
-    ```bash
+    ````bash
     cd submission_reminder_{yourName}  # Replace with the actual directory name
-    ```
+    ````
 
 ## Directory Structure
 
@@ -40,25 +40,25 @@ This repository contains a shell script (`create_environment.sh`) to set up the 
 
 1.  **Clone the Repository (Optional):** If you've downloaded this as a zip file, skip this step. If you're using Git, clone the repository to your local machine:
 
-    ```bash
+    ````bash
     git clone [https://github.com/](https://github.com/)[your_username]/submission_reminder_setup.git  # Replace with your repo URL
     cd submission_reminder_setup
-    ```
+    ````
 
 2.  **Run the Setup Script:** Make the `create_environment.sh` script executable and then run it:
 
-    ```bash
+    ````bash
     chmod +x create_environment.sh
     ./create_environment.sh
-    ```
+    ````
 
     The script will prompt you for your name. This name will be used to create the main directory for the application.
 
 3.  **Navigate to the Application Directory:** After the script finishes, a directory named `submission_reminder_{yourName}` will be created (where `{yourName}` is the name you entered). Navigate into this directory:
 
-    ```bash
+    ````bash
     cd submission_reminder_{yourName}  # Replace with the actual directory name
-    ```
+    ````
 
 ## Directory Structure
 
